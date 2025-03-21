@@ -1,0 +1,23 @@
+﻿<Window x:Class="feladat0321.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:feladat0321"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1500" Width="1000">
+    <Grid Background="#FF0917E6">
+        <Label x:Name="OPSystems" Background="White" Content="OPSystems" HorizontalAlignment="Left" Margin="21,40,0,0" VerticalAlignment="Top" Height="53" Width="189" FontSize="36"/>
+        <Label x:Name="Computer_Type" Background="White" Content="Computer_Type" HorizontalAlignment="Left" Margin="740,40,0,0" VerticalAlignment="Top" Height="53" Width="250" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
+        <TextBox x:Name="ComputersList" HorizontalAlignment="Left" Margin="765,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200
+                 " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
+        <TextBox x:Name="OPSystemsList" HorizontalAlignment="Left" Margin="16,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200                  " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
+        <Label x:Name="Computer_Type_Copy" Background="White" Content="Type" HorizontalAlignment="Left" Margin="833,178,0,0" VerticalAlignment="Top" Height="53" Width="83" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
+        <Label x:Name="Computer_Type_Copy1" Background="White" Content="Types" HorizontalAlignment="Left" Margin="41,152,0,0" VerticalAlignment="Top" Height="52" Width="150" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
+        <Label x:Name="Computer_Type_Copy2" Background="White" Content="Displays" HorizontalAlignment="Left" Margin="796,0,0,0" VerticalAlignment="Center" Height="53" Width="138" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
+        <TextBox x:Name="ComputersList_Copy" HorizontalAlignment="Left" Margin="765,666,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200                  " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
+        <Label x:Name="Computer_Type_Copy3" Background="White" Content="Memories" HorizontalAlignment="Left" Margin="778,968,0,0" VerticalAlignment="Top" Height="53" Width="174" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
+        <TextBox x:Name="ComputersList_Copy1" HorizontalAlignment="Left" Margin="765,1054,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200                  " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
+        <Label x:Name="Computer_Type_Copy4" Background="White" Content="Displays" HorizontalAlignment="Left" Margin="796,573,0,0" VerticalAlignment="Top" Height="53" Width="138" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
+    </Grid>
+</Window>
