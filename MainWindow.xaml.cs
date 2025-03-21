@@ -49,13 +49,13 @@ namespace feladat0321
                 return false;
             }
         }
-        private void update(string FirstName, string LastName, string Password)
+        private void update(string Brand, string LastName, string Password)
         {
             try
             {
                 conn.Connection.Open();
 
-                string sql = $"UPDATE 'data' SET `FirstName`= '{FirstName}',`LastName`='{LastName}',`Password`='{Password}' WHERE `Id`= '{id}' ;";
+                string sql = $"UPDATE 'data' SET `Brand`= '{Brand}',`LastName`='{LastName}',`Password`='{Password}' WHERE `Id`= '{id}' ;";
 
                 MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
 
