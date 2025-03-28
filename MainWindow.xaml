@@ -5,21 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:feladat0321"
         mc:Ignorable="d"
-        Title="MainWindow" Height="2000" Width="1000">
+        Title="Számítógép bolt" Height="315" Width="620">
     <Grid Background="#FF0917E6">
-        <Label x:Name="OPSystems" Background="White" Content="OPSystems" HorizontalAlignment="Left" Margin="21,40,0,0" VerticalAlignment="Top" Height="53" Width="189" FontSize="36"/>
-        <Label x:Name="Computer_Type" Background="White" Content="Computer_Type" HorizontalAlignment="Left" Margin="740,40,0,0" VerticalAlignment="Top" Height="53" Width="250" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
-        <TextBox x:Name="ComputersList" HorizontalAlignment="Left" Margin="765,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200
-                 " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
-        <TextBox x:Name="OPSystemsList" HorizontalAlignment="Left" Margin="16,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200                  " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
-        <Label x:Name="Computer_Type_Copy" Background="White" Content="Type" HorizontalAlignment="Left" Margin="833,178,0,0" VerticalAlignment="Top" Height="53" Width="83" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
-        <Label x:Name="Computer_Type_Copy1" Background="White" Content="Types" HorizontalAlignment="Left" Margin="41,152,0,0" VerticalAlignment="Top" Height="52" Width="150" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
-        <Label x:Name="Computer_Type_Copy2" Background="White" Content="Displays" HorizontalAlignment="Left" Margin="796,0,0,0" VerticalAlignment="Center" Height="53" Width="138" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
-        <TextBox x:Name="ComputersList_Copy" HorizontalAlignment="Left" Margin="765,666,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200                  " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
-        <Label x:Name="Computer_Type_Copy3" Background="White" Content="Memories" HorizontalAlignment="Left" Margin="778,968,0,0" VerticalAlignment="Top" Height="53" Width="174" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
-        <TextBox x:Name="ComputersList_Copy1" HorizontalAlignment="Left" Margin="765,1054,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200                  " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
-        <Label x:Name="Computer_Type_Copy4" Background="White" Content="Displays" HorizontalAlignment="Left" Margin="796,573,0,0" VerticalAlignment="Top" Height="53" Width="138" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
-        <Label x:Name="Computer_Type_Copy5" Background="White" Content="Brand" HorizontalAlignment="Left" Margin="812,1368,0,0" VerticalAlignment="Top" Height="53" Width="106" FontSize="36" FontWeight="{Binding Background, ElementName=Computer_Type}"/>
-        <TextBox x:Name="ComputersList_Copy2" HorizontalAlignment="Left" Margin="765,1490,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="250" Width="200                  " FontFamily="Arial Rounded MT Bold" FontSize="20"/>
+        <Menu Height="300" Width="600" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Margin="10,0,0,0">
+            <MenuItem Header="Számítógépek" Name="computer" Width="119" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Computer_Click">
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFD1D3D6" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+            </MenuItem>
+            <MenuItem Header="Operációs rendszerek" Name="Ops" Height="40" Width="180" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Ops_Click">
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFD9DBE2" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+            </MenuItem>
+            <DataGrid x:Name="DataGrid1" Width="495" HorizontalAlignment="Center" VerticalAlignment="Center" Height="157" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFF9F6F6"/>
+        </Menu>
     </Grid>
 </Window>
