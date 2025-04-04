@@ -32,14 +32,13 @@ namespace feladat0321
 
                 using (var connection = new MySqlConnection(ConnectionString))
                 {
+                    string sql = $"SELECT * FROM `comp`";
                     connection.Open();
-                    string sql = $"SELECT * FROM comp";
-                    using (MySqlCommand cmdSel = new MySqlCommand(sql, connection))
+                    using (var da = new MySqlDataAdapter(sql, connection))
                     {
                         DataTable dt = new DataTable();
-                        MySqlDataAdapter da = new MySqlDataAdapter(cmdSel);
                         da.Fill(dt);
-                        DataGrid1.DataContext = dt;
+                        DataGrid1.ItemsSource = dt.DefaultView;
                     }
                     connection.Close();
                 }
@@ -56,14 +55,13 @@ namespace feladat0321
 
                 using (var connection = new MySqlConnection(ConnectionString))
                 {
+                    string sql = $"SELECT * FROM `osystem`";
                     connection.Open();
-                    string sql = $"SELECT * FROM osystem";
-                    using (MySqlCommand cmdSel = new MySqlCommand(sql, connection))
+                    using (var da = new MySqlDataAdapter(sql, connection))
                     {
                         DataTable dt = new DataTable();
-                        MySqlDataAdapter da = new MySqlDataAdapter(cmdSel);
                         da.Fill(dt);
-                        DataGrid1.DataContext = dt;
+                        DataGrid1.ItemsSource = dt.DefaultView;
                     }
                     connection.Close();
                 }
