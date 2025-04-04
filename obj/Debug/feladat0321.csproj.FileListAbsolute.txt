@@ -46,3 +46,6 @@ C:\Users\Tanulo\Source\Repos\WPFComputer\obj\Debug\feladat0321.csproj.CoreCompil
 C:\Users\Tanulo\Source\Repos\WPFComputer\obj\Debug\feladat0.6A6B7F0F.Up2Date
 C:\Users\Tanulo\Source\Repos\WPFComputer\obj\Debug\feladat0321.exe
 C:\Users\Tanulo\Source\Repos\WPFComputer\obj\Debug\feladat0321.pdb
+C:\Users\Tanulo\Source\Repos\WPFComputer\obj\Debug\feladat0321_Content.g.cs
+C:\Users\Tanulo\Source\Repos\WPFComputer\obj\Debug\Window1.g.cs
+C:\Users\Tanulo\Source\Repos\WPFComputer\obj\Debug\Window1.baml

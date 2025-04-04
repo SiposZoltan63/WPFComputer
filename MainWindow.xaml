@@ -25,6 +25,8 @@
                 </MenuItem.Background>
             </MenuItem>
             <DataGrid x:Name="DataGrid1" Width="495" HorizontalAlignment="Center" VerticalAlignment="Center" Height="157" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFF9F6F6"/>
+            <TextBox x:Name="textbox1" TextWrapping="Wrap" Text="TextBox" Width="120"/>
+            <TextBox x:Name="textbox2" TextWrapping="Wrap" Text="TextBox" Width="120"/>
         </Menu>
     </Grid>
 </Window>
