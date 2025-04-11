@@ -64,7 +64,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtOsId" HorizontalAlignment="Left" Margin="482,455,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Margin="482,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtOsId" HorizontalAlignment="Left" Margin="472,453,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Margin="472,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Grid.ColumnSpan="2"/>
+        <Label Content="Display" HorizontalAlignment="Left" Margin="483,357,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Black" Grid.ColumnSpan="2" Foreground="Red"/>
     </Grid>
 </Window>
