@@ -1,8 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,9 +25,10 @@ namespace feladat0321
         public MainWindow()
         {
             InitializeComponent();
+            ListComputers();
         }
         private const string ConnectionString = "Server=localhost;Database=computer;Uid=root;Password=;SslMode=None";
-
+        MySqlConnection connection = new MySqlConnection("Server=localhost;Database=computer;Uid=root;Password=;SslMode=None");
         private void ListComputers()
         {
             try
@@ -80,70 +84,71 @@ namespace feladat0321
         {
             ListOs();
         }
-        //04.04
-        private bool Beleptet(string username, string password)
+        //04.11
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
+            connection.Open();
 
-            try
+            var Brand = txtBrand.Text;
+            var Type = txtType.Text;
+            var Display = txtDisplay.Text;
+            var Memory = txtMemory.Text;
+            var OsId = txtOsId.Text;
+            var sql = $"INSERT INTO `comp`(`Brand`, `Type`, `Display`, `Memory`,`OsId`) VALUES ('{txtBrand.Text}','{txtType.Text}','{txtDisplay.Text}','{txtMemory.Text}','{txtOsId.Text}')";
+            var beszuras = new MySqlCommand(sql, connection).ExecuteNonQuery();
+            connection.Close();
+            if (beszuras == 1)
             {
-                using (var connection = new MySqlConnection(ConnectionString))
-                {
-                    connection.Open();
-
-                    string sql = $"SELECT `Id` FROM `user` WHERE UserName = @username AND Password = @password";
-
-                    MySqlCommand cmd = new MySqlCommand(sql, connection);
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
-
-                    MySqlDataReader dr = cmd.ExecuteReader();
-
-                    bool van = dr.Read();
-
-                    if (van)
-                    {
-                        UserId.Id = dr.GetInt32(0);
-                    }
-
-                    connection.Close();
-
-
-                    return van;
-                }
+                DataGrid1.Items.Clear();
+                ListComputers();
             }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            txtBrand.Text = "";
+            txtType.Text = "";
+            txtDisplay.Text = "";
+            txtMemory.Text = "";
+            txtOsId.Text = "";
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button3_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                if (Beleptet(textbox1.Text, textbox2.Text) == true)
+            connection.Open();
 
-                {
-                    MessageBox.Show("Regisztrált tag");
-                    Window2 windows2  = new Window2();
-                    windows2.ShowDialog();
-                }
-                else
-                {
-                    Window1 windows1 = new Window1();
-                    windows1.ShowDialog();
-                }
-            }
-            catch (Exception ex)
+            var Name = txtName.Text;
+            var sql = $"INSERT INTO `osystem`(`Name`) VALUES ('{txtName.Text}')";
+            var beszuras = new MySqlCommand(sql, connection).ExecuteNonQuery();
+            connection.Close();
+            if (beszuras == 1)
             {
-
-                MessageBox.Show(ex.Message);
+                DataGrid1.Items.Clear();
+                ListComputers();
             }
+            txtName.Text = "";
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            connection.Open();
+
+            var Brand = txtBrand.Text;
+            var Type = txtType.Text;
+            var Display = txtDisplay.Text;
+            var Memory = txtMemory.Text;
+            var OsId = txtOsId.Text;
+            var sql = $"DELETE FROM `comp` WHERE `Id` = ";
+            var beszuras = new MySqlCommand(sql, connection).ExecuteNonQuery();
+            connection.Close();
+            if (beszuras == 1)
+            {
+                DataGrid1.Items.Clear();
+                ListComputers();
+            }
+            txtBrand.Text = "";
+            txtType.Text = "";
+            txtDisplay.Text = "";
+            txtMemory.Text = "";
+            txtOsId.Text = "";
         }
     }
-    public static class UserId
-    {
-
-        public static int Id { get; set; }
-    }
+    
 }

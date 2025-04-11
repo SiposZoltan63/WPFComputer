@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,13 +16,16 @@ using System.Windows.Shapes;
 namespace feladat0321
 {
     /// <summary>
-    /// Interaction logic for Window2.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class Window1 : Window
     {
-        public Window2()
+        public Window1()
         {
             InitializeComponent();
         }
+
+        MySqlConnection kapcs = new MySqlConnection("Server=localhost;Database=computer;Uid=root;Password=;SslMode=None");
+
     }
 }
