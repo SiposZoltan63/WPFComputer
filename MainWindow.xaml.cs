@@ -100,7 +100,7 @@ namespace feladat0321
             connection.Close();
             if (beszuras == 1)
             {
-                DataGrid1.Items.Clear();
+                DataGrid1.Items.Refresh();
                 ListComputers();
             }
             txtBrand.Text = "";
@@ -120,7 +120,7 @@ namespace feladat0321
             connection.Close();
             if (beszuras == 1)
             {
-                DataGrid1.Items.Clear();
+                DataGrid1.Items.Refresh();
                 ListComputers();
             }
             txtName.Text = "";
@@ -140,7 +140,7 @@ namespace feladat0321
             connection.Close();
             if (beszuras == 1)
             {
-                DataGrid1.Items.Clear();
+                DataGrid1.Items.Refresh();
                 ListComputers();
             }
             txtBrand.Text = "";

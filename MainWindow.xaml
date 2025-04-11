@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:feladat0321"
         mc:Ignorable="d"
-        Title="Számítógép bolt" Height="700" Width="620">
+        Title="Számítógép bolt" Height="700" Width="700">
     <Grid Background="#FF0917E6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="119*"/>
-            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="48*"/>
         </Grid.ColumnDefinitions>
         <Menu Height="300" Width="600" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Margin="10,10,0,0" Grid.ColumnSpan="2">
             <MenuItem Header="Számítógépek" Name="computer" Width="119" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Computer_Click">
@@ -30,8 +30,8 @@
             </MenuItem>
             <DataGrid x:Name="DataGrid1" Width="583" HorizontalAlignment="Center" VerticalAlignment="Center" Height="233" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFF9F6F6"/>
         </Menu>
-        <TextBox x:Name="txtBrand" HorizontalAlignment="Left" Margin="11,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtType" HorizontalAlignment="Left" Margin="250,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBrand" HorizontalAlignment="Left" Margin="11,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="txtType" HorizontalAlignment="Left" Margin="250,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
         <Button x:Name="button2" Content="Add" HorizontalAlignment="Left" Margin="221,422,0,0" VerticalAlignment="Top" Click="Button_Click" Foreground="WhiteSmoke" Height="43" Width="89" FontSize="20" FontFamily="Arial">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -40,18 +40,14 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Margin="0,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="txtMemory" HorizontalAlignment="Left" Margin="11,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtOsId" HorizontalAlignment="Left" Margin="0,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <Label Content="Brand" HorizontalAlignment="Left" Margin="34,362,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A"/>
-        <Label Content="Type" HorizontalAlignment="Left" Margin="279,362,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A"/>
-        <Label Content="Display" HorizontalAlignment="Left" Margin="15,362,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A" Grid.Column="1"/>
-        <Label Content="Memory" HorizontalAlignment="Left" Margin="22,418,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A"/>
-        <Label Content="OsId" HorizontalAlignment="Left" Margin="30,417,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A" Grid.Column="1"/>
-        <Label Content="New PC" HorizontalAlignment="Left" Margin="262,324,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FF89FD04"/>
-        <Label Content="New Os" HorizontalAlignment="Left" Margin="263,488,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FF89FD04"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="250,570,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="273,532,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A"/>
+        <TextBox x:Name="txtMemory" HorizontalAlignment="Left" Margin="11,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Label Content="Brand" HorizontalAlignment="Left" Margin="34,362,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A" Height="33" Width="75"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="279,362,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A" Height="33" Width="63"/>
+        <Label Content="Memory" HorizontalAlignment="Left" Margin="22,418,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A" Height="33" Width="98"/>
+        <Label Content="New PC" HorizontalAlignment="Left" Margin="262,324,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FF89FD04" Height="33" Width="96"/>
+        <Label Content="New Os" HorizontalAlignment="Left" Margin="263,488,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FF89FD04" Height="33" Width="94"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="250,570,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="273,532,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFF0A0A" Height="33" Width="73"/>
         <Button x:Name="button3" Content="Add" HorizontalAlignment="Left" Margin="230,602,0,0" VerticalAlignment="Top" Click="button3_Click" Height="37" Width="80" FontSize="20" Foreground="White">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -68,6 +64,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="      Delete" HorizontalAlignment="Left" Margin="434,488,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" FontSize="20" Foreground="#FFFD0404" Height="186" Width="176" Grid.ColumnSpan="2" Background="White"/>
+        <TextBox x:Name="txtOsId" HorizontalAlignment="Left" Margin="482,455,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Margin="482,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
